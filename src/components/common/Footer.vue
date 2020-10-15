@@ -1,5 +1,5 @@
  <template>
-  <footer>
+  <footer position="bottom" class="fluid-container footer">
     <div></div>
   </footer>
 </template>
@@ -18,4 +18,8 @@ export default {
   justify-content: space-between;
   padding-top: 20px;
 }
+/* .fluid-container.footer > *:last-child {
+    margin-bottom: 0px;
+    color: #fff;
+} */
 </style>

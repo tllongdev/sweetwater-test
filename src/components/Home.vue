@@ -1,20 +1,17 @@
  <template>
-    <div class="wrapper">
-      <Header/>
-      <div class="content"></div>
-      <Footer />
-    </div>
+  <div class="Home">
+    <h1>Home</h1>
+    <!-- ... -->
+  </div>
 </template>
 
  <script>
-import Header from "./common/Header";
-import Footer from "./common/Footer";
+import LayoutDefault from "./layouts/LayoutDefault.vue";
 
 export default {
   name: "Home",
-  components: {
-    Header,
-    Footer,
+  created() {
+    this.$emit("update:layout", LayoutDefault);
   },
 };
 </script>
