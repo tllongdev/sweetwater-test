@@ -3,9 +3,9 @@
 </div>
 <p align="center"><i>A Shopping Cart application using Vue.js, Vuex, and ES6</i></p>
 
-
-Local:   yarn install -> yarn serve -> http://localhost:8080/ 
 Link :
+
+Run App Locally: yarn install -> yarn serve 
 
 <a href="#"><img src="https://github.com/tllongdev/sweetwater-test/blob/master/public/ScreenShotSweetwaterCodeTestTimothyLeeLong.png" alt="" /></a>
 
