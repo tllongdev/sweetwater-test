@@ -9,6 +9,8 @@ Link To Deployed App : https://tllongdev.github.io/sweetwater/
 
 Run This App on Your Machine: clone -> yarn install -> yarn serve 
 
+Demonstration Video: https://youtu.be/qQRfYOil9ZU
+
 ## What I built
 
 We'd like you to build a Shopping Cart application using Vue.js, Vuex, and ES6. We've provided a JSON file with item data, but you're responsible for building the Cart. Your shopping cart should:
