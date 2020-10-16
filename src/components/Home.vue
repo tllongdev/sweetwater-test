@@ -1,8 +1,5 @@
  <template>
   <div class="Home">
-    <!-- <h1>Home</h1> -->
-    <!-- ... -->
-
     <div class="items-div">
       <b-card
         v-for="item in products"
@@ -27,14 +24,12 @@
 </template>
 
  <script>
-// import items from "../../public/items.json";
 import LayoutDefault from "./layouts/LayoutDefault.vue";
 
 export default {
   name: "Home",
   data() {
     return {
-      // items: items,
       products: this.$store.state.inventory,
     };
   },
@@ -43,8 +38,6 @@ export default {
   },
   methods: {
     addToCart(item) {
-      // console.log(item);
-      item.quantity = 1;
       this.$store.dispatch("addToCart", item);
     },
     testThis(item) {
