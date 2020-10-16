@@ -3,11 +3,11 @@
 </div>
 <p align="center"><i>A Shopping Cart application using Vue.js, Vuex, and ES6</i></p>
 
+<a href="#"><img src="https://github.com/tllongdev/sweetwater-test/blob/master/public/ScreenShotSweetwaterCodeTestTimothyLeeLong.png" alt="" /></a>
+
 Link :
 
-Local: yarn install -> yarn serve 
-
-<a href="#"><img src="https://github.com/tllongdev/sweetwater-test/blob/master/public/ScreenShotSweetwaterCodeTestTimothyLeeLong.png" alt="" /></a>
+Run This App on Your Machine: clone -> yarn install -> yarn serve 
 
 ## What I built
 
