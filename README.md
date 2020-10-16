@@ -7,7 +7,7 @@
 
 Link :
 
-<a href="#"><img src="https://raw.githubusercontent.com/tllongdev/sweetwater-test/public/ScreenShotSweetwaterCodeTestTimothyLeeLong.png" alt="" /></a>
+<a href="#"><img src="https://github.com/tllongdev/sweetwater-test/blob/master/public/ScreenShotSweetwaterCodeTestTimothyLeeLong.png" alt="" /></a>
 
 ## What I built
 
