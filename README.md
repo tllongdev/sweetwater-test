@@ -5,7 +5,7 @@
 
 Link :
 
-Run App Locally: yarn install -> yarn serve 
+Local: yarn install -> yarn serve 
 
 <a href="#"><img src="https://github.com/tllongdev/sweetwater-test/blob/master/public/ScreenShotSweetwaterCodeTestTimothyLeeLong.png" alt="" /></a>
 
