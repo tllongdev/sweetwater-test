@@ -3,9 +3,9 @@
 </div>
 <p align="center"><i>A Shopping Cart application using Vue.js, Vuex, and ES6</i></p>
 
-<a href="#"><img src="https://github.com/tllongdev/sweetwater-test/blob/master/public/ScreenShotSweetwaterCodeTestTimothyLeeLong.png" alt="" /></a>
+<a href="https://tllongdev.github.io/"><img src="https://github.com/tllongdev/sweetwater-test/blob/master/public/ScreenShotSweetwaterCodeTestTimothyLeeLong.png" alt="" /></a>
 
-Link :
+Link To Deployed App : https://tllongdev.github.io/
 
 Run This App on Your Machine: clone -> yarn install -> yarn serve 
 
