@@ -37,7 +37,7 @@ export const store = new Vuex.Store({
 
 			state.cartItems.splice(cartProductIndex, 1);
 		},
-		UPDATE_QTY: (state, {item, value}) => {
+		UPDATE_QTY: (state, { item, value }) => {
 			let cartProduct = state.cartItems.find(i => i.itemid === item.itemid);
 
 			if (cartProduct) {
@@ -46,14 +46,14 @@ export const store = new Vuex.Store({
 		},
 	},
 	actions: {
-		setInventory: ({ commit }) => {
-			commit(
-				'SET_INVENTORY',
-				items.forEach(e => delete e.quantity)
-			);
-		},
-		setCartItems: ({ commit }) => {
-			commit('SET_CART_ITEMS', items);
+		// setInventory: ({ commit }, payload) => {
+		// 	commit(
+		// 		'SET_INVENTORY',
+		// 		payload.forEach(e => delete e.quantity)
+		// 	);
+		// },
+		setCartItems: ({ commit }, payload) => {
+			commit('SET_CART_ITEMS', payload);
 		},
 		addToCart: ({ commit }, payload) => {
 			commit('ADD_TO_CART', payload);
@@ -66,7 +66,7 @@ export const store = new Vuex.Store({
 		},
 	},
 });
-// (() => store.commit('SET_CART_ITEMS', items))();
-(() => store.commit('SET_INVENTORY', items))();
-(() => store.state.inventory.forEach(e => delete e.quantity))();
+// (() => !localStorage.cart && store.commit('SET_CART_ITEMS', items))();
+(() => store.commit('SET_INVENTORY', items.slice()))();
+// (() => store.state.inventory.forEach(e => delete e.quantity))();
 // console.log(store.state);

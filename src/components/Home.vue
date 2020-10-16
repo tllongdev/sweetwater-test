@@ -36,9 +36,13 @@ export default {
   created() {
     this.$emit("update:layout", LayoutDefault);
   },
+  updated() {
+    localStorage.sws_cart = JSON.stringify(this.$store.state.cartItems);
+  },
   methods: {
     addToCart(item) {
       this.$store.dispatch("addToCart", item);
+      localStorage.sws_cart = JSON.stringify(this.$store.state.cartItems);
     },
     testThis(item) {
       item.quantity = 1;
@@ -62,6 +66,7 @@ export default {
 }
 .store-item {
   max-width: 300px;
+  min-height: 400px;
 }
 .store-item-img {
   min-height: 120px;

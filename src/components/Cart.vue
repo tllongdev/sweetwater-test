@@ -82,6 +82,9 @@ export default {
   created() {
     this.$emit("update:layout", LayoutDefault);
   },
+  updated() {
+    localStorage.sws_cart = JSON.stringify(this.$store.state.cartItems);
+  },
   methods: {
     removeFromCart(item) {
       this.$store.dispatch("removeFromCart", item);
@@ -129,8 +132,5 @@ export default {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
-}
-.store-item-img {
-  /* min-height: 120px; */
 }
 </style>
