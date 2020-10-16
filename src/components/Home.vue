@@ -4,7 +4,11 @@
     <!-- ... -->
 
     <div class="items-div">
-      <b-card v-for="item in items" :key="item.itemid" class="m-1 store-item">
+      <b-card
+        v-for="item in products"
+        :key="item.itemid"
+        class="m-1 store-item"
+      >
         <b-img
           center
           :src="item.image"
@@ -23,14 +27,15 @@
 </template>
 
  <script>
-import items from "../../public/items.json";
+// import items from "../../public/items.json";
 import LayoutDefault from "./layouts/LayoutDefault.vue";
 
 export default {
   name: "Home",
   data() {
     return {
-      items: items,
+      // items: items,
+      products: this.$store.state.inventory,
     };
   },
   created() {
@@ -38,6 +43,7 @@ export default {
   },
   methods: {
     addToCart(item) {
+      // console.log(item);
       item.quantity = 1;
       this.$store.dispatch("addToCart", item);
     },
