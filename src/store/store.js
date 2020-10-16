@@ -37,6 +37,13 @@ export const store = new Vuex.Store({
 
 			state.cartItems.splice(cartProductIndex, 1);
 		},
+		UPDATE_QTY: (state, {item, value}) => {
+			let cartProduct = state.cartItems.find(i => i.itemid === item.itemid);
+
+			if (cartProduct) {
+				cartProduct.quantity = value;
+			}
+		},
 	},
 	actions: {
 		setInventory: ({ commit }) => {
@@ -53,6 +60,9 @@ export const store = new Vuex.Store({
 		},
 		removeFromCart: ({ commit }, payload) => {
 			commit('REMOVE_FROM_CART', payload);
+		},
+		updateQty: ({ commit }, payload) => {
+			commit('UPDATE_QTY', payload);
 		},
 	},
 });
