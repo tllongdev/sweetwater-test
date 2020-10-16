@@ -31,29 +31,11 @@ export const store = new Vuex.Store({
 					quantity: 1,
 				});
 			}
-
-			// let item = payload;
-			// item = { ...item, quantity: 1 };
-			// if (state.cartItems.length > 0) {
-			// 	let bool = state.cartItems.some(i => i.itemId === item.itemId);
-			// 	if (bool) {
-			// 		let itemIndex = state.cartItems.findIndex(el => el.itemId === item.itemId);
-			// 		state.cartItems[itemIndex]['quantity'] += 1;
-			// 	} else {
-			// 		state.cartItems.push(item);
-			// 	}
-			// } else {
-			// 	state.cartItems.push(item);
-			// }
-
-			// const item = state.cartItems.some(i => i.itemId === payload.itemId);
-			// console.log(item);
-			// item
-			// 	? (state.cartItems[state.cartItems.findIndex(e => e.itemId === payload.itemId)]['quantity'] += 1)
-			// 	: state.cartItems.push(payload);
 		},
 		REMOVE_FROM_CART: (state, payload) => {
-			state.cartItems.filter(i => i.itemId !== payload.itemId);
+			let cartProductIndex = state.cartItems.findIndex(i => i.itemid === payload.itemid);
+
+			state.cartItems.splice(cartProductIndex, 1);
 		},
 	},
 	actions: {
@@ -68,6 +50,9 @@ export const store = new Vuex.Store({
 		},
 		addToCart: ({ commit }, payload) => {
 			commit('ADD_TO_CART', payload);
+		},
+		removeFromCart: ({ commit }, payload) => {
+			commit('REMOVE_FROM_CART', payload);
 		},
 	},
 });
